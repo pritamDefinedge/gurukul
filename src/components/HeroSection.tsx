@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import CountdownTimer from "./CountdownTimer";
+import PrasantSha from "../assets/prashant-shah-definedge-gurukul.webp";
 
 const HeroSection = () => {
   useEffect(() => {
@@ -165,7 +166,7 @@ const HeroSection = () => {
         <div className="hidden lg:flex lg:col-span-5 items-center justify-center relative mt-10 lg:mt-0">
           <div className="relative flex items-center justify-center">
             <img
-              src="https://gurukul.definedgesecurities.com/wp-content/uploads/2023/12/prashant-shah-definedge-gurukul.webp"
+              src={PrasantSha}
               alt="Course Mentor"
               className="hero-image mx-auto rounded-2xl w-full max-w-md object-cover shadow-xl border-4 border-white dark:border-gray-800 transition-transform duration-500 ease-in-out hover:scale-105"
             />
