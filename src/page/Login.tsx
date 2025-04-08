@@ -2,38 +2,32 @@ import React, { useEffect, useState, useRef } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FooterBanner from "../components/FooterBanner";
-
 import { ArrowUpIcon } from "@heroicons/react/24/solid";
 import Lenis from "@studio-freight/lenis";
 
 function Login() {
   const [scrollTop, setScrollTop] = useState(false);
-  const [showHome, setShowHome] = useState(true);
   const lenisRef = useRef<Lenis | null>(null);
 
-  // Initialize Lenis and scroll events
   useEffect(() => {
-    // Set up Lenis smooth scrolling
+    // Initialize Lenis
     lenisRef.current = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
     });
 
-    // RAF loop for Lenis
     const raf = (time: number) => {
       lenisRef.current?.raf(time);
       requestAnimationFrame(raf);
     };
     requestAnimationFrame(raf);
 
-    // Set up scroll listener
     const handleScroll = () => {
       setScrollTop(window.scrollY > 100);
     };
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup
     return () => {
       lenisRef.current?.destroy();
       window.removeEventListener("scroll", handleScroll);
@@ -48,29 +42,29 @@ function Login() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-indigo-100 via-white to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-black transition-colors duration-500">
       <Header />
-      <main>
-        <>
-          <p className="max-w-lg px-lg text-center align-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-            voluptatem rerum nemo architecto harum error fugit ex odio labore
-            exercitationem quam earum quae, explicabo esse tenetur, cumque ipsa
-            accusamus illo quo dolorem minus necessitatibus similique vel!
-            Libero quos, placeat, accusantium eos aspernatur porro mollitia
-            nobis facere vel voluptatem ratione, dolores fuga adipisci. Illum
-            esse accusantium, doloremque saepe vel nisi optio. Temporibus neque
-            iure ex blanditiis fuga, architecto, distinctio ea ducimus porro
-            consequatur sed quia explicabo inventore hic nobis fugit sint autem
-            sequi beatae quidem minus labore nostrum. Officia, commodi delectus
-            voluptatibus esse at eius dicta voluptates dolorum blanditiis, nihil
-            sint? ee
-          </p>
 
-          <FooterBanner />
-        </>
+      <main className="flex-grow flex items-center justify-center px-4 py-24 text-center">
+        <div className="backdrop-blur-md bg-white/40 dark:bg-white/10 border border-white/30 dark:border-white/10 rounded-3xl shadow-2xl p-10 sm:p-16 max-w-2xl w-full space-y-6 transition-all duration-500">
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-800 dark:text-white animate-pulse">
+            🔒 Login Page Coming Soon
+          </h1>
+          <p className="text-gray-600 dark:text-gray-300 text-lg">
+            We're currently crafting a secure and seamless login experience.
+            Stay tuned!
+          </p>
+          <div className="mt-6">
+            <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-full transition duration-300 shadow-md">
+              Get Notified
+            </button>
+          </div>
+        </div>
       </main>
+
+      <FooterBanner />
       <Footer />
+
       {/* Scroll To Top Button */}
       <button
         className={`fixed ${
