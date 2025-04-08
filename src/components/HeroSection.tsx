@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
+import CountdownTimer from "./CountdownTimer";
 
 const HeroSection = () => {
   useEffect(() => {
-    // Animation for the image on load
     const image = document.querySelector(".hero-image");
     if (image) {
       image.classList.add("animate-fade-in-up");
@@ -12,7 +12,6 @@ const HeroSection = () => {
   return (
     <section className="bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 py-12 md:py-12 overflow-hidden">
       <div className="max-w-screen-xl px-4 mx-auto lg:grid lg:grid-cols-12 lg:gap-12 xl:gap-24 items-center">
-        {/* Content Column */}
         <div className="lg:col-span-7 space-y-6 md:space-y-8">
           <div className="inline-block px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full mb-4">
             <span className="text-blue-600 dark:text-blue-400 font-medium text-sm">
@@ -64,7 +63,7 @@ const HeroSection = () => {
             ].map((item, index) => (
               <span
                 key={index}
-                className="text-xs font-medium px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400"
+                className="text-xs font-medium px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400"
               >
                 {item}
               </span>
@@ -96,7 +95,7 @@ const HeroSection = () => {
             </span>
           </div>
 
-          {/* Price Section */}
+          {/* Price Section with Countdown Timer */}
           <div className="mt-6 p-5 bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-800 dark:to-gray-700 rounded-xl border border-blue-200 dark:border-gray-700">
             <div className="flex items-end gap-4">
               <div>
@@ -116,16 +115,16 @@ const HeroSection = () => {
                 🔥 53% OFF
               </span>
             </div>
-            <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
-              Offer ends in 2 days
-            </p>
+
+            {/* Countdown Timer Here */}
+            <CountdownTimer endTime={new Date(Date.now() + 2 * 24 * 60 * 60 * 1000)} />
           </div>
 
-          {/* CTA */}
+          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
             <a
               href="#"
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2"
+              className="shine shine-anim px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2"
             >
               Enroll Now
               <svg
@@ -162,13 +161,13 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Image Column */}
+        {/* Image Section */}
         <div className="hidden lg:flex lg:col-span-5 items-center justify-center relative mt-10 lg:mt-0">
           <div className="relative flex items-center justify-center">
             <img
               src="https://gurukul.definedgesecurities.com/wp-content/uploads/2023/12/prashant-shah-definedge-gurukul.webp"
               alt="Course Mentor"
-              className="hero-image mx-auto rounded-2xl w-full max-w-md object-cover shadow-xl border-8 border-white dark:border-gray-800 transition-transform duration-500 ease-in-out hover:scale-105"
+              className="hero-image mx-auto rounded-2xl w-full max-w-md object-cover shadow-xl border-4 border-white dark:border-gray-800 transition-transform duration-500 ease-in-out hover:scale-105"
             />
 
             {/* Floating Badge */}
