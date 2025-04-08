@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Footer: React.FC = () => {
+
+
   return (
-    <footer id="footer" className="bg-gray-900 dark:bg-black text-gray-800 dark:text-white text-base">
+    <footer
+      id="footer"
+      className="relative bg-gray-900 dark:bg-black text-gray-800 dark:text-white text-base"
+    >
       <div className="text-center py-4">
         <div className="container mx-auto px-4 flex flex-col items-center justify-center">
           <p className="text-center text-sm sm:text-base text-gray-600 dark:text-gray-300">
@@ -14,6 +19,8 @@ const Footer: React.FC = () => {
           </p>
         </div>
       </div>
+
+    
     </footer>
   );
 };

@@ -12,11 +12,11 @@ const HeroSection = () => {
 
   return (
     <section className="bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 py-12 md:py-12 overflow-hidden">
-      <div className="max-w-screen-xl px-4 mx-auto lg:grid lg:grid-cols-12 lg:gap-12 xl:gap-24 items-center">
-        <div className="lg:col-span-7 space-y-6 md:space-y-8">
+      <div className="max-w-screen-xl px-4 sm:px-12 md:px-8 lg:px-12 xl:px-0 mx-auto lg:grid lg:grid-cols-12 lg:gap-12 xl:gap-24 items-center">
+        <div className="lg:col-span-6 space-y-6 md:space-y-8">
           <div className="inline-block px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full mb-4">
             <span className="text-blue-600 dark:text-blue-400 font-medium text-sm">
-              🚀 Premium Trading Course
+              🚀 Premium Course
             </span>
           </div>
 
@@ -117,8 +117,7 @@ const HeroSection = () => {
               </span>
             </div>
 
-            {/* Countdown Timer Here */}
-            <CountdownTimer endTime={new Date(Date.now() + 2 * 24 * 60 * 60 * 1000)} />
+          
           </div>
 
           {/* CTA Buttons */}
@@ -163,12 +162,12 @@ const HeroSection = () => {
         </div>
 
         {/* Image Section */}
-        <div className="hidden lg:flex lg:col-span-5 items-center justify-center relative mt-10 lg:mt-0">
+        <div className="hidden lg:flex lg:col-span-6 items-center justify-center relative mt-10 lg:mt-0">
           <div className="relative flex items-center justify-center">
             <img
               src={PrasantSha}
               alt="Course Mentor"
-              className="hero-image mx-auto rounded-2xl w-full max-w-md object-cover shadow-xl border-4 border-white dark:border-gray-800 transition-transform duration-500 ease-in-out hover:scale-105"
+              className="hero-image mx-auto rounded-2xl w-full max-w-md object-cover shadow-sm   dark:border-gray-800 transition-transform duration-500 ease-in-out hover:scale-105"
             />
 
             {/* Floating Badge */}
@@ -204,6 +203,7 @@ const HeroSection = () => {
         </div>
       </div>
     </section>
+    
   );
 };
 
