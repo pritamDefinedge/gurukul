@@ -33,7 +33,6 @@ function App() {
     };
     requestAnimationFrame(raf);
 
-
     // Set up scroll listener
     const handleScroll = () => {
       setScrollTop(window.scrollY > 100);
@@ -58,18 +57,11 @@ function App() {
     <div className="min-h-screen">
       <Header />
       <main>
- 
-          <>
-            <Hero />
-            <Courses />
-            <Mission />
-            <Instructors />
-            <Beneﬁt />
-            <Testimonial />
-            <Faq />
-            <FooterBanner />
-          </>
-     
+        <>
+          <Courses />
+
+          <FooterBanner />
+        </>
       </main>
       <Footer />
       {/* Scroll To Top Button */}

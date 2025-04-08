@@ -2,17 +2,11 @@ import React, { useEffect, useState, useRef } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FooterBanner from "../components/FooterBanner";
-import Hero from "../components/Hero";
-import Courses from "../components/Courses";
-import Mission from "../components/Mission";
-import Instructors from "../components/Instructors ";
-import Beneﬁt from "../components/Beneﬁt";
-import Testimonial from "../components/Testimonial";
-import Faq from "../components/Faq";
+
 import { ArrowUpIcon } from "@heroicons/react/24/solid";
 import Lenis from "@studio-freight/lenis";
 
-function App() {
+function Login() {
   const [scrollTop, setScrollTop] = useState(false);
   const [showHome, setShowHome] = useState(true);
   const lenisRef = useRef<Lenis | null>(null);
@@ -32,7 +26,6 @@ function App() {
       requestAnimationFrame(raf);
     };
     requestAnimationFrame(raf);
-
 
     // Set up scroll listener
     const handleScroll = () => {
@@ -58,18 +51,24 @@ function App() {
     <div className="min-h-screen">
       <Header />
       <main>
- 
-          <>
-            <Hero />
-            <Courses />
-            <Mission />
-            <Instructors />
-            <Beneﬁt />
-            <Testimonial />
-            <Faq />
-            <FooterBanner />
-          </>
-     
+        <>
+          <p className="max-w-lg px-lg text-center align-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+            voluptatem rerum nemo architecto harum error fugit ex odio labore
+            exercitationem quam earum quae, explicabo esse tenetur, cumque ipsa
+            accusamus illo quo dolorem minus necessitatibus similique vel!
+            Libero quos, placeat, accusantium eos aspernatur porro mollitia
+            nobis facere vel voluptatem ratione, dolores fuga adipisci. Illum
+            esse accusantium, doloremque saepe vel nisi optio. Temporibus neque
+            iure ex blanditiis fuga, architecto, distinctio ea ducimus porro
+            consequatur sed quia explicabo inventore hic nobis fugit sint autem
+            sequi beatae quidem minus labore nostrum. Officia, commodi delectus
+            voluptatibus esse at eius dicta voluptates dolorum blanditiis, nihil
+            sint? ee
+          </p>
+
+          <FooterBanner />
+        </>
       </main>
       <Footer />
       {/* Scroll To Top Button */}
@@ -86,4 +85,4 @@ function App() {
   );
 }
 
-export default App;
+export default Login;

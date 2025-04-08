@@ -1,30 +1,35 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Gurukul from "../assets/Gurukul.svg";
 
+// NavItem for desktop
 type NavItemProps = {
   label: string;
+  to: string;
 };
 
-const NavItem = ({ label }: NavItemProps) => (
-  <a
-    href="#"
+const NavItem = ({ label, to }: NavItemProps) => (
+  <Link
+    to={to}
     className="font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition"
   >
     {label}
-  </a>
+  </Link>
 );
 
-const NavItemMobile = ({ label }: NavItemProps) => (
+// NavItem for mobile
+const NavItemMobile = ({ label, to }: NavItemProps) => (
   <li>
-    <a
-      href="#"
+    <Link
+      to={to}
       className="block py-2 px-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium"
     >
       {label}
-    </a>
+    </Link>
   </li>
 );
 
+// Button component for icons
 type IconButtonProps = {
   icon: React.ReactNode;
   onClick?: () => void;
@@ -39,13 +44,14 @@ const IconButton = ({ icon, onClick }: IconButtonProps) => (
   </button>
 );
 
+// Login Icon
 type LoginIconProps = {
   mobile?: boolean;
 };
 
 const LoginIcon = ({ mobile }: LoginIconProps) => (
-  <a
-    href="#"
+  <Link
+    to="/login"
     className={`flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium ${
       mobile ? "py-2 px-3" : ""
     }`}
@@ -65,7 +71,7 @@ const LoginIcon = ({ mobile }: LoginIconProps) => (
       />
     </svg>
     <span>Login</span>
-  </a>
+  </Link>
 );
 
 const Header = () => {
@@ -92,20 +98,25 @@ const Header = () => {
     localStorage.setItem("color-theme", newMode ? "dark" : "light");
   };
 
+  const navItems = [
+    { label: "Home", to: "/" },
+    { label: "Courses", to: "/courses" },
+    { label: "About", to: "/about" },
+    { label: "Contact", to: "/contact" },
+  ];
+
   return (
-    // <header className="flex border-b border-gray-200 dark:border-gray-800 py-3 px-4 sm:px-10 bg-white dark:bg-gray-950 min-h-[65px] tracking-wide relative z-50">
-    //   <div className="flex flex-wrap items-center justify-between w-full max-w-screen-xl mx-auto">
     <header className="sticky top-0 z-50 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800">
       <div className="flex py-3 px-4 sm:px-10 min-h-[65px] tracking-wide max-w-screen-xl mx-auto justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
-          <a href="#" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img
               src={Gurukul}
               alt="logo"
               className="w-[164px] md:w-[160px] dark:invert"
             />
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Buttons */}
@@ -162,8 +173,8 @@ const Header = () => {
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center space-x-6">
           <nav className="flex items-center space-x-6">
-            {["Home", "Courses", "About", "Contact"].map((label) => (
-              <NavItem key={label} label={label} />
+            {navItems.map(({ label, to }) => (
+              <NavItem key={label} label={label} to={to} />
             ))}
           </nav>
 
@@ -274,8 +285,8 @@ const Header = () => {
               </div>
               <nav className="px-6 py-4">
                 <ul className="space-y-4">
-                  {["Home", "Courses", "About", "Contact"].map((label) => (
-                    <NavItemMobile key={label} label={label} />
+                  {navItems.map(({ label, to }) => (
+                    <NavItemMobile key={label} label={label} to={to} />
                   ))}
                 </ul>
                 <div className="mt-8 pt-4 border-t border-gray-200 dark:border-gray-800">
