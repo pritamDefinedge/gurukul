@@ -6,12 +6,107 @@ import Download from "../assets/download.jpg";
 
 import { ArrowUpIcon } from "@heroicons/react/24/solid";
 import Lenis from "@studio-freight/lenis";
-import HeroSection from "../components/HeroSection";
+import HeroSection from "../components/courseDetails/HeroSection";
+import WatchTrailer from "../components/courseDetails/WatchTrial";
+import Curriculum from "../components/courseDetails/Curriculum";
+import PrasantSha from "../assets/prashant-shah-definedge-gurukul.webp";
+
+const courseContent = [
+  {
+    title: "Introduction to Options",
+    description: "Get familiar with the basics of options trading.",
+    lessons: ["What are Options?", "Call vs Put", "Why Trade Options?"],
+  },
+  {
+    title: "Advanced Strategies",
+    description: "Dive into complex strategies for seasoned traders.",
+    lessons: ["Iron Condors", "Straddles", "Credit Spreads"],
+  },
+  {
+    title: "Risk Management",
+    description:
+      "Learn how to manage risk effectively in any market condition.",
+    lessons: ["Stop Loss Techniques", "Hedging with Options"],
+  },
+  {
+    title: "Risk Management",
+    description:
+      "Learn how to manage risk effectively in any market condition.",
+    lessons: ["Stop Loss Techniques", "Hedging with Options"],
+  },
+  {
+    title: "Risk Management",
+    description:
+      "Learn how to manage risk effectively in any market condition.",
+    lessons: ["Stop Loss Techniques", "Hedging with Options"],
+  },
+  {
+    title: "Risk Management",
+    description:
+      "Learn how to manage risk effectively in any market condition.",
+    lessons: ["Stop Loss Techniques", "Hedging with Options"],
+  },
+  {
+    title: "Risk Management",
+    description:
+      "Learn how to manage risk effectively in any market condition.",
+    lessons: ["Stop Loss Techniques", "Hedging with Options"],
+  },
+  {
+    title: "Risk Management",
+    description:
+      "Learn how to manage risk effectively in any market condition.",
+    lessons: ["Stop Loss Techniques", "Hedging with Options"],
+  },
+  {
+    title: "Risk Management",
+    description:
+      "Learn how to manage risk effectively in any market condition.",
+    lessons: ["Stop Loss Techniques", "Hedging with Options"],
+  },
+  {
+    title: "Risk Management",
+    description:
+      "Learn how to manage risk effectively in any market condition.",
+    lessons: ["Stop Loss Techniques", "Hedging with Options"],
+  },
+  {
+    title: "Risk Management",
+    description:
+      "Learn how to manage risk effectively in any market condition.",
+    lessons: ["Stop Loss Techniques", "Hedging with Options"],
+  },
+  {
+    title: "Risk Management",
+    description:
+      "Learn how to manage risk effectively in any market condition.",
+    lessons: ["Stop Loss Techniques", "Hedging with Options"],
+  },
+  {
+    title: "Risk Management",
+    description:
+      "Learn how to manage risk effectively in any market condition.",
+    lessons: ["Stop Loss Techniques", "Hedging with Options"],
+  },
+];
 
 const names = [
-  "Alex", "Maria", "John", "Aisha", "David", "Sofia",
-  "Liam", "Emma", "Ravi", "Mia", "Noah", "Olivia",
-  "Ethan", "Isla", "Leo", "Zara",
+  "Alex",
+  "Maria",
+  "John",
+  "Aisha",
+  "David",
+  "Sofia",
+  "Liam",
+  "Emma",
+  "Ravi",
+  "Mia",
+  "Noah",
+  "Olivia",
+  "Ethan",
+  "Isla",
+  "Leo",
+  "Zara",
 ];
 
 const messages = [
@@ -87,9 +182,14 @@ function CourseDetails() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <HeroSection />
+      <WatchTrailer
+        videoSrc="/video.mp4"
+        thumbnailSrc={PrasantSha}
+        playButtonSize="md"
+      />
+      <Curriculum items={courseContent} />;
       <FooterBanner />
       <Footer />
-
       {/* Scroll To Top Button */}
       <button
         className={`fixed ${
@@ -100,23 +200,23 @@ function CourseDetails() {
       >
         <ArrowUpIcon className="w-6 h-6 text-white" />
       </button>
-
       {/* Social Proof Nudge */}
       <div
-        className={`fixed bottom-4 left-1/2 transform -translate-x-1/2 sm:left-5 sm:transform-none sm:bottom-5 z-50
-        w-[95%] sm:w-auto max-w-md
-        bg-white dark:bg-gray-900
-        text-gray-900 dark:text-gray-100
-        shadow-xl rounded-xl px-4 sm:px-5 py-3
-        flex items-center space-x-3 sm:space-x-4
-        border border-gray-200 dark:border-gray-700
-        backdrop-blur-md bg-opacity-90 dark:bg-opacity-80
-        transition-all duration-500 ease-in-out
-        ${
-          visible
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-5 pointer-events-none"
-        }`}
+        className={`fixed bottom-4 left-1/2 transform -translate-x-1/2
+    md:left-auto md:right-6 md:transform-none md:bottom-6 z-40
+    w-[95%] md:w-auto max-w-md
+    bg-white dark:bg-gray-900
+    text-gray-900 dark:text-gray-100
+    shadow-xl rounded-xl px-4 md:px-5 py-3
+    flex items-center space-x-3 md:space-x-4
+    border border-gray-200 dark:border-gray-700
+    backdrop-blur-md bg-opacity-90 dark:bg-opacity-80
+    transition-all duration-500 ease-in-out
+    ${
+      visible
+        ? "opacity-100 translate-y-0"
+        : "opacity-0 translate-y-5 pointer-events-none"
+    }`}
       >
         <img
           src={Download}
