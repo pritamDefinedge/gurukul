@@ -1,10 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
-import { FaQuoteLeft } from "react-icons/fa";
+import { FaBookOpen, FaQuoteLeft } from "react-icons/fa";
+import { HiOutlineClock, HiChevronLeft, HiChevronRight } from "react-icons/hi";
+import type { IconType } from "react-icons";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const LeftIcon = HiChevronLeft as IconType;
+const RightIcon = HiChevronRight as IconType;
 
 const testimonials = [
   {
@@ -12,35 +16,35 @@ const testimonials = [
     author: "Aman Verma",
     role: "Trader & Analyst",
     avatar: "https://i.pravatar.cc/150?img=1",
-    rating: 5
+    rating: 5,
   },
   {
     quote: "The Relative Strength strategies explained here have helped me build more confident portfolios.",
     author: "Priya Iyer",
     role: "Investment Consultant",
     avatar: "https://i.pravatar.cc/150?img=2",
-    rating: 4
+    rating: 4,
   },
   {
     quote: "From trend projections to RS Matrix—everything was broken down so well. Highly recommended!",
     author: "Rajesh Mehta",
     role: "Technical Analyst",
     avatar: "https://i.pravatar.cc/150?img=3",
-    rating: 5
+    rating: 5,
   },
   {
     quote: "Best course I've attended this year. Learned so much in so little time.",
     author: "Sneha Kapoor",
     role: "Equity Researcher",
     avatar: "https://i.pravatar.cc/150?img=4",
-    rating: 5
+    rating: 5,
   },
   {
     quote: "I use these concepts every day now. My trades have improved significantly.",
     author: "Ravi Desai",
     role: "Independent Trader",
     avatar: "https://i.pravatar.cc/150?img=5",
-    rating: 4
+    rating: 4,
   },
 ];
 
@@ -50,25 +54,24 @@ const TestimonialCarousel: React.FC = () => {
   const visibleCards = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
 
   const handlePrev = () => {
-    setStartIndex((prev) => 
+    setStartIndex((prev) =>
       prev === 0 ? testimonials.length - visibleCards : prev - 1
     );
   };
 
   const handleNext = () => {
-    setStartIndex((prev) => 
+    setStartIndex((prev) =>
       prev + visibleCards >= testimonials.length ? 0 : prev + 1
     );
   };
 
   useEffect(() => {
     const handleResize = () => {
-      const newVisibleCards = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
-      setStartIndex(0); // Reset index on resize
+      setStartIndex(0);
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
@@ -100,7 +103,9 @@ const TestimonialCarousel: React.FC = () => {
     return [...Array(5)].map((_, i) => (
       <svg
         key={i}
-        className={`w-5 h-5 ${i < rating ? 'text-yellow-400' : 'text-gray-300 dark:text-gray-600'}`}
+        className={`w-5 h-5 ${
+          i < rating ? "text-yellow-400" : "text-gray-300 dark:text-gray-600"
+        }`}
         fill="currentColor"
         viewBox="0 0 20 20"
       >
@@ -116,11 +121,9 @@ const TestimonialCarousel: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-         
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-          What People Say
+            What People Say
           </h2>
-         
         </div>
 
         <div className="relative">
@@ -135,15 +138,13 @@ const TestimonialCarousel: React.FC = () => {
                   <div className="absolute top-6 left-6 text-blue-500 dark:text-blue-400 opacity-10 text-6xl">
                     <FaQuoteLeft />
                   </div>
-                  
-                  <div className="flex mb-4">
-                    {renderStars(item.rating)}
-                  </div>
-                  
+
+                  <div className="flex mb-4">{renderStars(item.rating)}</div>
+
                   <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 relative z-10">
                     "{item.quote}"
                   </p>
-                  
+
                   <div className="flex items-center">
                     <div className="relative">
                       <img
@@ -152,14 +153,26 @@ const TestimonialCarousel: React.FC = () => {
                         className="w-14 h-14 rounded-full object-cover border-2 border-blue-500 dark:border-blue-400"
                       />
                       <div className="absolute -bottom-1 -right-1 bg-blue-500 dark:bg-blue-600 rounded-full p-1">
-                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        <svg
+                          className="w-4 h-4 text-white"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
                         </svg>
                       </div>
                     </div>
                     <div className="ml-4">
-                      <h4 className="font-bold text-gray-900 dark:text-white">{item.author}</h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">{item.role}</p>
+                      <h4 className="font-bold text-gray-900 dark:text-white">
+                        {item.author}
+                      </h4>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        {item.role}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -172,14 +185,14 @@ const TestimonialCarousel: React.FC = () => {
               className="p-3 bg-white dark:bg-gray-700 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-600 transition-all duration-300 group"
               aria-label="Previous testimonial"
             >
-              <HiChevronLeft className="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition" />
+              <LeftIcon className="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition" />
             </button>
             <button
               onClick={handleNext}
               className="p-3 bg-white dark:bg-gray-700 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-600 transition-all duration-300 group"
               aria-label="Next testimonial"
             >
-              <HiChevronRight className="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition" />
+              <RightIcon className="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition" />
             </button>
           </div>
         </div>
