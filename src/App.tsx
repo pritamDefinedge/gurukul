@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./page/Home";
 import About from "./page/About";
 import Courses from "./page/Courses";
+import CourseDetails from "./page/CourseDetails"; 
 import Contact  from "./page/Contact";
 import Login  from "./page/Login";
 import NotFound from "./page/NotFound"; // optional 404 page
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/courses" element={<Courses />} />
+          <Route path="/courses/:slug" element={<CourseDetails />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
 

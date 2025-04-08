@@ -13,7 +13,7 @@ const RightIcon = HiChevronRight as IconType;
 const testimonials = [
   {
     quote: "This course completely changed how I view Point & Figure charts. The clarity and depth were unmatched.",
-    author: "Aman Verma",
+    author: "Dilip Shah",
     role: "Trader & Analyst",
     avatar: "https://i.pravatar.cc/150?img=1",
     rating: 5,

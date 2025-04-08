@@ -13,48 +13,48 @@ const benefits = [
     title: "Learn at Your Own Pace",
     description:
       "Expand your trading knowledge at your own pace with 100% online courses at your fingertips",
-    bg: "bg-teal-400",
-    shadow: "shadow-teal-500/40",
+    bg: "bg-gray-200",
+    shadow: "shadow-gray-500/40",
   },
   {
     icon: Comprehensive,
     title: "Comprehensive Courses",
     description:
       "Delve deep into our courses, and gain in-depth knowledge of various trading and investing concepts",
-    bg: "bg-rose-500",
-    shadow: "shadow-rose-500/40",
+    bg: "bg-gray-200",
+    shadow: "shadow-gray-500/40",
   },
   {
     icon: Exclusive,
     title: "Exclusive Insights",
     description:
       "Gain exclusive insights from seasoned traders, tap into their wisdom and learn from their expertise",
-    bg: "bg-sky-500",
-    shadow: "shadow-sky-500/40",
+    bg: "bg-gray-200",
+    shadow: "shadow-gray-500/40",
   },
   {
     icon: Course,
     title: "Certified Courses",
     description:
       "Validate your learnings with a certification for each course gained after an assessment.",
-    bg: "bg-indigo-500",
-    shadow: "shadow-indigo-500/40",
+    bg: "bg-gray-200",
+    shadow: "shadow-gray-500/40",
   },
   {
     icon: Simplified,
     title: "Simplified Learning",
     description:
       "Created in an easy-to-grasp format, our courses ensure seamless learning even for complex concepts",
-    bg: "bg-yellow-500",
-    shadow: "shadow-yellow-500/40",
+    bg: "bg-gray-200",
+    shadow: "shadow-gray-500/40",
   },
   {
     icon: LiveQa,
     title: "Live Q&A",
     description:
       "Each course conveys knowledge while keeping practical aspects in mind. Get your queries resolved by our mentors with Live Q&A",
-    bg: "bg-purple-500",
-    shadow: "shadow-purple-500/40",
+    bg: "bg-gray-200",
+    shadow: "shadow-gray-500/40",
   },
 ];
 

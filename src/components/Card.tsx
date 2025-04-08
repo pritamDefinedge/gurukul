@@ -1,10 +1,12 @@
 import React from "react";
 import { FaLanguage, FaBookOpen } from "react-icons/fa";
 import { HiOutlineClock } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 interface Member {
   title: string;
   name: string;
+  slug: String;
   hours: string;
   chepters: string;
   language: string;
@@ -21,10 +23,8 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ member }) => {
   return (
     <div className="relative w-full max-w-sm mx-auto  hover:shadow-xl">
-      <a
-        href="https://gurukul.definedgesecurities.com/courses/become-a-noiseless-trader/"
-        target="_blank"
-        rel="noopener noreferrer"
+      <Link
+        to={`/courses/${member.slug}`}
       >
         <div className="relative flex flex-col bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl overflow-hidden shadow-md hover:ring-2 hover:ring-cyan-500/30 transition-all">
           {/* Image */}
@@ -102,7 +102,7 @@ const Card: React.FC<CardProps> = ({ member }) => {
             </div>
           </div>
         </div>
-      </a>
+      </Link>
     </div>
   );
 };

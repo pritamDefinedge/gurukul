@@ -11,6 +11,7 @@ const Courses: React.FC = () => {
       title:
         "Become a Noiseless Trader – Trade the markets the Point & Figure way",
       name: "Prashant Shah",
+      slug:"become-a-noiseless-trader",
       hours: "35 Hours",
       chepters: "14 Chapters",
       language: "Hindi",
@@ -23,6 +24,7 @@ const Courses: React.FC = () => {
     {
       title: "Trading Options Based on Options Charts",
       name: "Abhijit Phatak",
+      slug:"trading-options-based-on-options-charts",
       hours: "4 Hours",
       chepters: "8 Chapters",
       language: "English",
@@ -35,6 +37,7 @@ const Courses: React.FC = () => {
     {
       title: "Learn Trading Options From Basics",
       name: "Prashant Shah",
+      slug:"learn-trading-options-from-basics",
       hours: "14 Hours",
       chepters: "6 Chapters",
       language: "Hindi",
@@ -47,6 +50,7 @@ const Courses: React.FC = () => {
     {
       title: "Harmonic Trading Patterns Simplified",
       name: "Brijesh Bhatia",
+      slug:"harmonic-trading-patterns-simplified",
       hours: "5 Hours",
       chepters: "4 Modules",
       language: "Eng & Hin Mix",
@@ -59,6 +63,7 @@ const Courses: React.FC = () => {
     {
       title: "Profitable Trading with Renko charts",
       name: "Prashant Shah",
+      slug:"profitable-trading-with-renko-charts",
       hours: "11 Hours",
       chepters: "11 Chapters",
       language: "Hindi",
@@ -71,6 +76,7 @@ const Courses: React.FC = () => {
     {
       title: "Candlestick Patterns Demystified with Scanners",
       name: "Brijesh Bhatia",
+      slug:"candlestick-patterns-demystified-with-scanners",
       hours: "3 Hours",
       chepters: "18 Chapters",
       language: "Eng & Hin Mix",
@@ -83,6 +89,7 @@ const Courses: React.FC = () => {
     {
       title: "Relative Strength and Breadth analysis",
       name: " Prashant Shah",
+      slug:"master-heikin-ashi",
       hours: "",
       chepters: "",
       language: "",
@@ -95,6 +102,7 @@ const Courses: React.FC = () => {
     {
       title: "Mastering Trends with Heikin Ashi",
       name: "Brijesh Bhatia",
+      slug:"",
       hours: "3 Hours",
       chepters: "7 Chapters",
       language: "English & Hindi",
