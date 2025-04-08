@@ -23,8 +23,9 @@ const Mission: React.FC = () => {
                 🎯 Our Vision
               </h3>
               <p className="mt-2 text-slate-600 dark:text-slate-300">
-                Empowering retail traders with well-researched, practical, and innovative
-                trading concepts. Years of experience, simplified and shared.
+                Empowering retail traders with well-researched, practical, and
+                innovative trading concepts. Years of experience, simplified and
+                shared.
               </p>
             </div>
 
@@ -33,13 +34,14 @@ const Mission: React.FC = () => {
                 🚀 Our Mission
               </h3>
               <p className="mt-2 text-slate-600 dark:text-slate-300">
-                Building a community of disciplined, sensible, and noiseless traders.
-                Learning together for mutual growth with practical insights and mentorship.
+                Building a community of disciplined, sensible, and noiseless
+                traders. Learning together for mutual growth with practical
+                insights and mentorship.
               </p>
             </div>
 
             <button
-              className="shine shine-anim inline-block bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-700 hover:to-blue-800 text-white px-6 py-3 rounded-full font-semibold shadow-md transition border-2 border-transparent hover:border-black dark:hover:border-gray-200"
+              className="shine shine-anim inline-block bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-700 hover:to-blue-800 text-white px-6 py-2 rounded-full font-semibold shadow-md transition border border-transparent hover:border-black dark:hover:border-gray-200"
               aria-label="Get Started"
             >
               Get Started

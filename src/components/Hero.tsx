@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
             Learn Stock Market Trading & Investment from Seasoned Experts. Gain
             practical knowledge and insights to master the markets.
           </p>
-          <button className="shine shine-anim overflow-hidden inline-block mt-4 bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-700 hover:to-blue-800 text-white px-6 py-2 rounded-full font-medium shadow-md transition border-2 border-transparent hover:border-white dark:hover:border-gray-200">
+          <button className="shine shine-anim overflow-hidden inline-block mt-4 bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-700 hover:to-blue-800 text-white px-6 py-2 rounded-full font-medium shadow-md transition border border-transparent hover:border-white dark:hover:border-gray-200">
             Get Started
           </button>
         </div>
