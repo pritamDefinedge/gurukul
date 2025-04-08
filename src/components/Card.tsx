@@ -10,6 +10,7 @@ interface Member {
   hours: string;
   chepters: string;
   language: string;
+  offer: String;
   discount: string;
   originalPrice: string;
   image: string;
@@ -23,16 +24,21 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ member }) => {
   return (
     <div className="relative w-full max-w-sm mx-auto  hover:shadow-xl">
-      <Link
-        to={`/courses/${member.slug}`}
-      >
+      <Link to={`/courses/${member.slug}`}>
         <div className="relative flex flex-col bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl overflow-hidden shadow-md hover:ring-2 hover:ring-cyan-500/30 transition-all">
           {/* Image */}
-          <div className="relative h-56 w-full overflow-hidden">
+          <div className="relative h-56 w-full overflow-hidden rounded-xl shadow-lg group">
+            {/* Beautiful Gradient Badge */}
+            {member.offer && (
+              <span className="absolute bottom-3 left-0 bg-gradient-to-r from-pink-500 to-red-500 text-white text-[10px] sm:text-xs font-bold tracking-wide px-3 py-1.5 rounded-r-full shadow-lg z-10 animate-pulse">
+                {member.offer}
+              </span>
+            )}
+
             <img
               src={member.image}
               alt="Become a Noiseless Trader"
-              className="object-cover w-full h-full transition-transform duration-300 hover:scale-105 "
+              className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
             />
           </div>
 
