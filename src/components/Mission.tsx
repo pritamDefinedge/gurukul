@@ -2,8 +2,7 @@ import React from "react";
 
 const Mission: React.FC = () => {
   return (
-    <section 
-    className="py-20 bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+    <section className="py-20 bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <div className="w-11/12 max-w-7xl mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-16">
@@ -34,14 +33,17 @@ const Mission: React.FC = () => {
                 🚀 Our Mission
               </h3>
               <p className="mt-2 text-slate-600 dark:text-slate-300">
-                Building a community of disciplined, sensible, and noiseless traders. Learning
-                together for mutual growth with practical insights and mentorship.
+                Building a community of disciplined, sensible, and noiseless traders.
+                Learning together for mutual growth with practical insights and mentorship.
               </p>
             </div>
 
-            <button className="shine shine-anim inline-block mt-4 bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-700 hover:to-blue-800 text-white px-6 py-2 rounded-full font-medium shadow-md transition border-2 border-transparent hover:border-white dark:hover:border-gray-200">
-    Get Started
-  </button>
+            <button
+              className="shine shine-anim inline-block bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-700 hover:to-blue-800 text-white px-6 py-3 rounded-full font-semibold shadow-md transition border-2 border-transparent hover:border-black dark:hover:border-gray-200"
+              aria-label="Get Started"
+            >
+              Get Started
+            </button>
           </div>
 
           {/* Image block */}
@@ -49,7 +51,7 @@ const Mission: React.FC = () => {
             <div className="rounded-2xl overflow-hidden shadow-xl border border-slate-200 dark:border-slate-700">
               <img
                 src="https://gurukul.definedgesecurities.com/wp-content/uploads/2024/01/MicrosoftTeams-image-1-1.png"
-                alt="Mission Visual"
+                alt="Illustration of Vision and Mission"
                 className="object-cover w-full h-full p-3"
               />
             </div>

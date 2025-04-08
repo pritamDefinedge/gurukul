@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-import Events from "./page/Events";
+import Home from "./page/Home";
 
 function App() {
   return (
     <div className="min-h-screen">
-      <Events />
+      <Home />
     </div>
   );
 }
