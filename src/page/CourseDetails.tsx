@@ -21,7 +21,7 @@ import Carriculum from "../assets/carriculum.png";
 
 const courseContent = [
   {
-    title: "Introduction to Options",
+    title: "Know Point & Figure",
     description: "Get familiar with the basics of options trading.",
     lessons: [
       { title: "What are Options?", time: "60 minutes" },
@@ -106,7 +106,7 @@ const courseContent = [
     imageSrc: Carriculum,
   },
   {
-    title: "Options Trading Platforms",
+    title: "Reversal and Pullback Formations",
     description: "Get familiar with popular trading platforms.",
     lessons: [
       { title: "Using TradingView", time: "30 minutes" },

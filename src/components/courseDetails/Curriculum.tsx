@@ -93,7 +93,7 @@ const Curriculum: React.FC<CurriculumProps> = ({
                   onClick={() => toggleItem(index)}
                   className="flex justify-between items-center w-full px-6 py-5 focus:outline-none hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
                 >
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                  <div className="flex flex-col sm:flex-wrap sm:flex-row sm:items-center gap-2 sm:gap-4">
                     <div className="px-2 py-2 h-auto sm:h-10 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-semibold rounded-full flex items-center justify-center shadow-md">
                       Chapter {index + 1}
                     </div>
