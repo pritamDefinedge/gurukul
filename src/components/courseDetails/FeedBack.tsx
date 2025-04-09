@@ -16,7 +16,7 @@ const reviews = [
     avatar: "https://flowbite.com/docs/images/people/profile-picture-2.jpg",
     rating: 4,
     date: "Feb. 12, 2022",
-    content: "Much appreciated! Glad you liked it ☺️",
+    content: "i have just joined course I am really a great fan of you sir I have been following you since so many years, I like to watch all definage trading content whereever I get it to watch even though I just went through couple of chapters but still I am assure that there is lots of value is going add into my trading journey thank you prashant sir and warm regards to AP sir Raju ranjan sir and all definage team thanks to all ☺️",
   },
   {
     id: 3,
