@@ -9,84 +9,155 @@ import Lenis from "@studio-freight/lenis";
 import HeroSection from "../components/courseDetails/HeroSection";
 import WatchTrailer from "../components/courseDetails/WatchTrial";
 import Curriculum from "../components/courseDetails/Curriculum";
+import WhatIsCourse from "../components/courseDetails/WhatIsCourse";
+import MakeTrading from "../components/courseDetails/MakeTrading";
+import Confusion from "../components/courseDetails/Confusion";
+import Instructor from "../components/courseDetails/Instructor";
+import Faq from "../components/courseDetails/Faq";
+import FeedBack from "../components/courseDetails/FeedBack";
+
 import PrasantSha from "../assets/prashant-shah-definedge-gurukul.webp";
+import Carriculum from "../assets/carriculum.png";
 
 const courseContent = [
   {
     title: "Introduction to Options",
     description: "Get familiar with the basics of options trading.",
-    lessons: ["What are Options?", "Call vs Put", "Why Trade Options?"],
+    lessons: [
+      { title: "What are Options?", time: "60 minutes" },
+      { title: "Call vs Put", time: "60 minutes" },
+      { title: "Why Trade Options?", time: "60 minutes" },
+    ],
+    imageSrc: Carriculum,
   },
   {
     title: "Advanced Strategies",
     description: "Dive into complex strategies for seasoned traders.",
-    lessons: ["Iron Condors", "Straddles", "Credit Spreads"],
+    lessons: [
+      { title: "Iron Condors", time: "45 minutes" },
+      { title: "Straddles", time: "30 minutes" },
+      { title: "Credit Spreads", time: "50 minutes" },
+    ],
+    imageSrc: Carriculum,
   },
   {
     title: "Risk Management",
     description:
       "Learn how to manage risk effectively in any market condition.",
-    lessons: ["Stop Loss Techniques", "Hedging with Options"],
+    lessons: [
+      { title: "Stop Loss Techniques", time: "40 minutes" },
+      { title: "Hedging with Options", time: "50 minutes" },
+    ],
+    imageSrc: Carriculum,
   },
   {
-    title: "Risk Management",
-    description:
-      "Learn how to manage risk effectively in any market condition.",
-    lessons: ["Stop Loss Techniques", "Hedging with Options"],
+    title: "Technical Analysis",
+    description: "Understand the fundamentals of technical analysis.",
+    lessons: [
+      { title: "Chart Patterns", time: "30 minutes" },
+      { title: "Indicators and Oscillators", time: "45 minutes" },
+      { title: "Volume Analysis", time: "40 minutes" },
+    ],
+    imageSrc: Carriculum,
   },
   {
-    title: "Risk Management",
-    description:
-      "Learn how to manage risk effectively in any market condition.",
-    lessons: ["Stop Loss Techniques", "Hedging with Options"],
+    title: "Fundamental Analysis",
+    description: "Learn how to analyze stocks based on financial statements.",
+    lessons: [
+      { title: "Understanding Financial Statements", time: "50 minutes" },
+      { title: "Valuation Techniques", time: "60 minutes" },
+    ],
+    imageSrc: Carriculum,
   },
   {
-    title: "Risk Management",
-    description:
-      "Learn how to manage risk effectively in any market condition.",
-    lessons: ["Stop Loss Techniques", "Hedging with Options"],
+    title: "Options Pricing",
+    description: "Explore how options are priced in the market.",
+    lessons: [
+      { title: "Black-Scholes Model", time: "60 minutes" },
+      { title: "Implied Volatility", time: "45 minutes" },
+    ],
+    imageSrc: Carriculum,
   },
   {
-    title: "Risk Management",
-    description:
-      "Learn how to manage risk effectively in any market condition.",
-    lessons: ["Stop Loss Techniques", "Hedging with Options"],
+    title: "Trading Psychology",
+    description: "Master the psychological aspects of trading.",
+    lessons: [
+      { title: "Emotional Discipline", time: "30 minutes" },
+      { title: "Overcoming Fear and Greed", time: "40 minutes" },
+    ],
+    imageSrc: Carriculum,
   },
   {
-    title: "Risk Management",
-    description:
-      "Learn how to manage risk effectively in any market condition.",
-    lessons: ["Stop Loss Techniques", "Hedging with Options"],
+    title: "Options Strategies for Beginners",
+    description: "Learn simple options strategies to get started.",
+    lessons: [
+      { title: "Covered Calls", time: "30 minutes" },
+      { title: "Protective Puts", time: "30 minutes" },
+    ],
+    imageSrc: Carriculum,
   },
   {
-    title: "Risk Management",
-    description:
-      "Learn how to manage risk effectively in any market condition.",
-    lessons: ["Stop Loss Techniques", "Hedging with Options"],
+    title: "Market Trends",
+    description: "Identify and analyze market trends.",
+    lessons: [
+      { title: "Bull and Bear Markets", time: "30 minutes" },
+      { title: "Market Cycles", time: "40 minutes" },
+    ],
+    imageSrc: Carriculum,
   },
   {
-    title: "Risk Management",
-    description:
-      "Learn how to manage risk effectively in any market condition.",
-    lessons: ["Stop Loss Techniques", "Hedging with Options"],
+    title: "Options Trading Platforms",
+    description: "Get familiar with popular trading platforms.",
+    lessons: [
+      { title: "Using TradingView", time: "30 minutes" },
+      { title: "Brokerage Platforms Overview", time: "45 minutes" },
+    ],
+    imageSrc: Carriculum,
   },
   {
-    title: "Risk Management",
-    description:
-      "Learn how to manage risk effectively in any market condition.",
-    lessons: ["Stop Loss Techniques", "Hedging with Options"],
+    title: "Tax Implications of Trading",
+    description: "Understand the tax implications of trading options.",
+    lessons: [
+      { title: "Tax Basics for Traders", time: "30 minutes" },
+      { title: "Reporting Gains and Losses", time: "40 minutes" },
+    ],
+    imageSrc: Carriculum,
   },
   {
-    title: "Risk Management",
-    description:
-      "Learn how to manage risk effectively in any market condition.",
-    lessons: ["Stop Loss Techniques", "Hedging with Options"],
+    title: "Creating a Trading Plan",
+    description: "Learn how to create a solid trading plan.",
+    lessons: [
+      { title: "Setting Goals", time: "30 minutes" },
+      { title: "Risk Management in Your Plan", time: "40 minutes" },
+    ],
+    imageSrc: Carriculum,
   },
   {
-    title: "Risk Management",
-    description:
-      "Learn how to manage risk effectively in any market condition.",
-    lessons: ["Stop Loss Techniques", "Hedging with Options"],
+    title: "Options Trading Myths",
+    description: "Debunk common myths about options trading.",
+    lessons: [
+      { title: "Myth vs Reality", time: "30 minutes" },
+      { title: "Understanding Risks", time: "40 minutes" },
+    ],
+    imageSrc: Carriculum,
+  },
+  {
+    title: "Building a Watchlist",
+    description: "Learn how to build and manage a watchlist.",
+    lessons: [
+      { title: "Selecting Stocks ", time: "30 minutes" },
+      { title: "Monitoring Performance", time: "30 minutes" },
+    ],
+    imageSrc: Carriculum,
+  },
+  {
+    title: "Options Trading for Income",
+    description: "Explore strategies to generate income through options.",
+    lessons: [
+      { title: "Selling Options", time: "40 minutes" },
+      { title: "Income Strategies Overview", time: "50 minutes" },
+    ],
+    imageSrc: Carriculum,
   },
 ];
 
@@ -187,7 +258,13 @@ function CourseDetails() {
         thumbnailSrc={PrasantSha}
         playButtonSize="md"
       />
-      <Curriculum items={courseContent} />;
+      <Curriculum items={courseContent} />
+      <WhatIsCourse />
+      <MakeTrading />
+      <Confusion />
+      <Instructor />
+      <Faq />
+      <FeedBack />
       <FooterBanner />
       <Footer />
       {/* Scroll To Top Button */}
