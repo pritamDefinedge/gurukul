@@ -8,14 +8,14 @@ function MakeTrading() {
         <div className="flex flex-col-reverse lg:flex-row items-center gap-12 md:gap-16 lg:gap-20">
           {/* Text Section */}
           <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-gray-900 dark:text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold leading-tight text-gray-900 dark:text-white">
               Make trading{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
                 peaceful
               </span>
             </h2>
 
-            <div className="space-y-4 sm:space-y-5 text-base sm:text-lg md:text-lg font-medium text-gray-700 dark:text-slate-300 leading-relaxed">
+            <div className="text-left space-y-4 sm:space-y-5 text-base sm:text-md md:text-lg font-medium text-gray-700 dark:text-slate-300 leading-relaxed">
               <p>
                 The significant advantages of Point & Figure charts lie in their objectivity and simplicity.
               </p>
