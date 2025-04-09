@@ -26,7 +26,7 @@ const EventDetails = () => {
               >
                 <button
                   onClick={() => handleToggle(index)}
-                  className="accordion-toggle group flex items-center justify-between text-left w-full text-base font-medium text-gray-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition"
+                  className="accordion-toggle group flex items-center justify-between text-left w-full text-base sm:text-base md:text-lg lg:text-lg font-medium text-gray-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition"
                   aria-expanded={isOpen}
                 >
                   <h5>{item.question}</h5>
