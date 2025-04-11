@@ -19,7 +19,7 @@ const Jumbotron: React.FC = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h1 className="text-3xl text-balance sm:text-4xl lg:text-5xl font-bold  text-gray-900 dark:text-white">
+          <h1 className="text-3xl sm:text-3xl md:text-4xl font-bold  text-gray-900 dark:text-white">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 dark:from-blue-400 dark:to-purple-400">
               Definedge {" "}
             </span>
@@ -32,7 +32,7 @@ const Jumbotron: React.FC = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="mt-6 md:mt-8 text-base sm:text-lg md:text-xl text-gray-700 dark:text-slate-300 max-w-4xl mx-auto leading-relaxed"
+            className="mt-6 md:mt-8 text-base  sm:text-md md:text-md lg:text-lg xl:text-xl text-gray-700 dark:text-slate-300 max-w-4xl mx-auto leading-relaxed"
           >
             With a team of market analysts, trade strategists and software
             professionals, we strive to simplify the trading and investment

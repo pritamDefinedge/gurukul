@@ -8,7 +8,7 @@ import Stock from "../components/aboutus/Stock";
 import Jumbotron from "../components/aboutus/Jumbotron";
 import GurukulWorks from "../components/aboutus/GurukulWorks";
 import GurukulHelp from "../components/aboutus/GurukulHelp";
-import Journey from "../components/aboutus/Journey";
+import SmartTrading from "../components/aboutus/SmartTrading";
 
 import { ArrowUpIcon } from "@heroicons/react/24/solid";
 
@@ -38,7 +38,7 @@ function Contact() {
       <Jumbotron />
       <GurukulWorks />
       <GurukulHelp/>
-      <Journey/>
+      <SmartTrading/>
 
    
       <FooterBanner />

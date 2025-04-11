@@ -46,7 +46,7 @@ const GurukulHelp: React.FC = () => {
       <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 dark:opacity-10 animate-blob animation-delay-2000" />
       <div className="absolute bottom-0 left-0 w-32 h-32 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 dark:opacity-10 animate-blob animation-delay-4000" />
 
-      <section className="w-full bg-gradient-to-br from-blue-600 to-blue-800 dark:from-blue-900 dark:to-blue-950 py-20 px-4 sm:px-6 lg:px-8 relative">
+      <section className="w-full bg-gradient-to-br from-blue-600 to-blue-800 dark:from-blue-900 dark:to-blue-950 py-24 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-6xl mx-auto text-center mb-12 relative z-10">
           <h2 className="text-4xl sm:text-5xl md:text-4xl font-bold tracking-tight text-white mb-6">
             How Can <span className="text-yellow-300">Definedge Gurukul</span>{" "}
@@ -59,7 +59,7 @@ const GurukulHelp: React.FC = () => {
         </div>
       </section>
 
-      <section className="w-full px-4 sm:px-6 lg:px-8 pb-24 -mt-20 relative z-20">
+      <section className="w-full px-4 sm:px-6 lg:px-8 pb-24 -mt-24 relative z-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {features.map((feature, index) => (
             <div

@@ -11,6 +11,8 @@ import {
   ChatBubbleLeftRightIcon,
   ClockIcon,
 } from "@heroicons/react/24/solid";
+import background from "../assets/aboutusbackround.svg";
+
 
 function Contact() {
   const [scrollTop, setScrollTop] = useState(false);
@@ -33,24 +35,30 @@ function Contact() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-700 to-blue-400 px-6 py-24 md:py-32 overflow-hidden">
-        {/* Floating background elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 -left-20 w-64 h-64 bg-blue-800 rounded-full filter blur-3xl opacity-20"></div>
-          <div className="absolute bottom-1/3 -right-20 w-96 h-96 bg-blue-800 rounded-full filter blur-3xl opacity-20"></div>
-        </div>
+      <section
+      className="relative bg-no-repeat bg-cover bg-center px-6 py-24 md:py-32 overflow-hidden dark:bg-gray-800"
+      style={{
+        backgroundImage: `url(${background})`,
+      }}
+    >
+      {/* Optional floating glows */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <div className="absolute top-1/4 -left-20 w-64 h-64 bg-blue-800 rounded-full filter blur-3xl opacity-20"></div>
+        <div className="absolute bottom-1/3 -right-20 w-96 h-96 bg-blue-800 rounded-full filter blur-3xl opacity-20"></div>
+      </div>
 
-        <div className="max-w-7xl mx-auto relative z-10 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
-          >
-            Contact Us
-          </motion.h1>
-        </div>
-      </section>
+      {/* Content */}
+      <div className="max-w-7xl mx-auto relative z-10 text-center">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl sm:text-5xl lg:text-6xl font-bold text-blue-400 dark:text-blue-900 leading-tight mb-6"
+        >
+          Contact Us
+        </motion.h1>
+      </div>
+    </section>
 
       {/* Contact Info Grid */}
       <section className="py-16 px-4 sm:px-6">

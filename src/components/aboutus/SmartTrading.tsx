@@ -30,7 +30,7 @@ const Journey: React.FC = () => {
               on various aspects of trading and investment
             </p>
 
-            <button className="shine shine-anim inline-block mt-4 bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-700 hover:to-blue-800 text-white px-6 py-2 rounded-full font-medium shadow-md transition border border-transparent hover:border-white dark:hover:border-gray-200">
+            <button className="shine shine-anim inline-block mt-4 bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-700 hover:to-blue-800 text-white px-8 py-2 rounded-full font-medium shadow-md transition border border-transparent hover:border-black dark:hover:border-gray-200">
               Join Us
             </button>
           </motion.div>
@@ -61,8 +61,8 @@ const Journey: React.FC = () => {
           viewport={{ once: true }}
           className="hidden lg:flex absolute bottom-1/4 left-1/2 -translate-x-1/2 translate-y-1/2 z-10"
         >
-          <div className="bg-white/30 dark:bg-blue-900/40 backdrop-blur-md p-6 rounded-xl shadow-xl space-y-4 w-[320px] border border-white/20 dark:border-white/10">
-            <ul className="space-y-3 text-sm sm:text-base text-gray-800 dark:text-gray-100">
+          <div className="bg-black/30 dark:bg-white/50 backdrop-blur-md p-6 rounded-xl shadow-xl space-y-4 w-[320px] border border-white/20 dark:border-white/10">
+            <ul className="space-y-3 text-sm sm:text-base text-gray-300 dark:text-gray-700">
               <li className="flex items-start gap-2">
                 <span className="text-blue-600 dark:text-cyan-400 mt-1">✔</span>
                 <span>
