@@ -82,8 +82,8 @@ const Curriculum: React.FC<CurriculumProps> = ({
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          <div className="space-y-5">
+        <div className="grid grid-cols-1  lg:grid-cols-2 gap-10">
+          <div className="space-y-5 sticky top-20 self-start">
             {items.map((item, index) => (
               <div
                 key={index}

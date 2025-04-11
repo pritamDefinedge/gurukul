@@ -13,7 +13,6 @@ import {
 } from "@heroicons/react/24/solid";
 import background from "../assets/aboutusbackround.svg";
 
-
 function Contact() {
   const [scrollTop, setScrollTop] = useState(false);
 
@@ -36,110 +35,122 @@ function Contact() {
 
       {/* Hero Section */}
       <section
-      className="relative bg-no-repeat bg-cover bg-center px-6 py-24 md:py-32 overflow-hidden dark:bg-gray-800"
-      style={{
-        backgroundImage: `url(${background})`,
-      }}
-    >
-      {/* Optional floating glows */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-        <div className="absolute top-1/4 -left-20 w-64 h-64 bg-blue-800 rounded-full filter blur-3xl opacity-20"></div>
-        <div className="absolute bottom-1/3 -right-20 w-96 h-96 bg-blue-800 rounded-full filter blur-3xl opacity-20"></div>
-      </div>
+        className="relative bg-no-repeat bg-cover bg-center px-6 py-24 md:py-32 overflow-hidden dark:bg-gray-800"
+        style={{
+          backgroundImage: `url(${background})`,
+        }}
+      >
+        {/* Optional floating glows */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+          <div className="absolute top-1/4 -left-20 w-64 h-64 bg-blue-800 rounded-full filter blur-3xl opacity-20"></div>
+          <div className="absolute bottom-1/3 -right-20 w-96 h-96 bg-blue-800 rounded-full filter blur-3xl opacity-20"></div>
+        </div>
 
-      {/* Content */}
-      <div className="max-w-7xl mx-auto relative z-10 text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold text-blue-400 dark:text-blue-900 leading-tight mb-6"
-        >
-          Contact Us
-        </motion.h1>
-      </div>
-    </section>
+        {/* Content */}
+        <div className="max-w-7xl mx-auto relative z-10 text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-blue-400 dark:text-blue-900 leading-tight mb-6"
+          >
+            Contact Us
+          </motion.h1>
+        </div>
+      </section>
 
       {/* Contact Info Grid */}
-      <section className="py-16 px-4 sm:px-6">
+      <section className="py-16 px-4 sm:px-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           >
             {/* Office Location */}
             <motion.a
-              whileHover={{ y: -5 }}
+              whileHover={{ y: -8, scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               href="https://www.google.com/maps/place/3rd+Floor,+Ambashish,+Lane+9,+Pakharbag,+Bavdhan,+Pune,+Maharashtra+411021"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
+              className="relative overflow-hidden group bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 flex flex-col items-center text-center transition-all duration-300 border border-gray-200/50 dark:border-gray-700/50 hover:border-blue-300/50 dark:hover:border-blue-400/30"
             >
-              <div className="bg-blue-100 dark:bg-blue-900/30 p-4 rounded-full mb-4">
-                <MapPinIcon className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-100/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative z-10 bg-gradient-to-br from-blue-500 to-purple-500 p-4 rounded-2xl mb-6 shadow-md">
+                <MapPinIcon className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 relative z-10">
                 Our Office
               </h3>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-gray-600 dark:text-gray-300 relative z-10">
                 3rd Floor, Ambashish, Lane – 9, Pakharbag, Bavdhan, Pune,
                 Maharashtra – 411021
               </p>
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </motion.a>
 
             {/* Email */}
             <motion.a
-              whileHover={{ y: -5 }}
+              whileHover={{ y: -8, scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               href="mailto:info@definedge.com"
-              className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
+              className="relative overflow-hidden group bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 flex flex-col items-center text-center transition-all duration-300 border border-gray-200/50 dark:border-gray-700/50 hover:border-blue-300/50 dark:hover:border-blue-400/30"
             >
-              <div className="bg-blue-100 dark:bg-blue-900/30 p-4 rounded-full mb-4">
-                <EnvelopeIcon className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-100/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative z-10 bg-gradient-to-br from-blue-500 to-purple-500 p-4 rounded-2xl mb-6 shadow-md">
+                <EnvelopeIcon className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 relative z-10">
                 Email Us
               </h3>
-              <p className="text-blue-600 dark:text-blue-400 font-medium">
+              <p className="text-blue-600 dark:text-blue-400 font-medium relative z-10 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors">
                 info@definedge.com
               </p>
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </motion.a>
 
             {/* Phone */}
             <motion.a
-              whileHover={{ y: -5 }}
+              whileHover={{ y: -8, scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               href="tel:02061923200"
-              className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
+              className="relative overflow-hidden group bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 flex flex-col items-center text-center transition-all duration-300 border border-gray-200/50 dark:border-gray-700/50 hover:border-blue-300/50 dark:hover:border-blue-400/30"
             >
-              <div className="bg-blue-100 dark:bg-blue-900/30 p-4 rounded-full mb-4">
-                <PhoneIcon className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-100/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative z-10 bg-gradient-to-br from-blue-500 to-purple-500 p-4 rounded-2xl mb-6 shadow-md">
+                <PhoneIcon className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 relative z-10">
                 Call Us
               </h3>
-              <p className="text-blue-600 dark:text-blue-400 font-medium">
+              <p className="text-blue-600 dark:text-blue-400 font-medium relative z-10 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors">
                 020-61923200
               </p>
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </motion.a>
 
             {/* Hours */}
             <motion.div
-              whileHover={{ y: -5 }}
-              className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
+              whileHover={{ y: -8, scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="relative overflow-hidden group bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 flex flex-col items-center text-center transition-all duration-300 border border-gray-200/50 dark:border-gray-700/50 hover:border-blue-300/50 dark:hover:border-blue-400/30"
             >
-              <div className="bg-blue-100 dark:bg-blue-900/30 p-4 rounded-full mb-4">
-                <ClockIcon className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-100/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative z-10 bg-gradient-to-br from-blue-500 to-purple-500 p-4 rounded-2xl mb-6 shadow-md">
+                <ClockIcon className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 relative z-10">
                 Working Hours
               </h3>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-gray-600 dark:text-gray-300 relative z-10">
                 Mon-Fri: 9AM - 6PM
                 <br />
                 Sat-Sun: Closed
               </p>
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </motion.div>
           </motion.div>
         </div>
