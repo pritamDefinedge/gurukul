@@ -9,7 +9,7 @@ const Courses: React.FC = () => {
   const members = [
     {
       title:
-        "Become a Noiseless Trader – Trade the markets the Point & Figure way",
+        "Become a Noiseless Trader – Trade the markets the Point & Figure way ",
       name: "Prashant Shah",
       slug: "become-a-noiseless-trader",
       hours: "35 Hours",
@@ -79,7 +79,7 @@ const Courses: React.FC = () => {
       logo: "https://gurukul.definedgesecurities.com/wp-content/uploads/2024/12/Prashant-Shah-Gurukul-150x150.jpg",
     },
     {
-      title: "Candlestick Patterns Demystified with Scanners",
+      title: "Candlestick Patterns Demystified with Scanners ",
       name: "Brijesh Bhatia",
       slug: "candlestick-patterns-demystified-with-scanners",
       hours: "3 Hours",

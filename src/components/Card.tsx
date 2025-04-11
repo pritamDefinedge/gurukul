@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 interface Member {
   title: string;
   name: string;
-  slug: String;
+  slug: string;
   hours: string;
   chepters: string;
   language: string;
-  offer: String;
+  offer: string;
   discount: string;
   originalPrice: string;
   image: string;
@@ -23,28 +23,27 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ member }) => {
   return (
-    <div className="relative w-full max-w-sm mx-auto  hover:shadow-xl">
-      <Link to={`/courses/${member.slug}`}>
-        <div className="relative flex flex-col bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl overflow-hidden shadow-md hover:ring-2 hover:ring-cyan-500/30 transition-all">
+    <div className="relative w-full max-w-sm mx-auto min-h-[400px] flex">
+      <Link to={`/courses/${member.slug}`} className="w-full">
+        <div className="relative flex flex-col justify-between h-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl overflow-hidden shadow-md hover:ring-2 hover:ring-cyan-500/30 transition-all">
           {/* Image */}
-          <div className="relative h-56 w-full overflow-hidden rounded-xl shadow-lg group">
-            {/* Beautiful Gradient Badge */}
+          <div className="relative h-48 w-full overflow-hidden shadow-lg group">
+            {/* Gradient Badge */}
             {member.offer && (
               <span className="absolute bottom-3 left-0 bg-gradient-to-r from-pink-500 to-red-500 text-white text-[10px] sm:text-xs font-bold tracking-wide px-3 py-1.5 rounded-r-full shadow-lg z-10 animate-pulse">
                 {member.offer}
               </span>
             )}
-
             <img
               src={member.image}
-              alt="Become a Noiseless Trader"
+              alt={member.title}
               className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
             />
           </div>
 
           {/* Content */}
           <div className="p-5 flex flex-col gap-3">
-            <h3 className="text-lg font-semibold text-slate-800 dark:text-white leading-snug">
+            <h3 className="text-lg font-semibold text-slate-800 dark:text-white leading-snug line-clamp-2">
               {member.title}
             </h3>
 
@@ -66,7 +65,6 @@ const Card: React.FC<CardProps> = ({ member }) => {
                 </span>
               )}
 
-              {/* If none are present, show "Coming Soon" */}
               {!member.hours && !member.chepters && !member.language && (
                 <span className="w-full inline-flex items-center gap-2 text-xs font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-500 px-4 py-1.5 rounded-full shadow-md animate-pulse">
                   <span className="text-lg">🚧</span> Coming Soon ...
@@ -74,7 +72,7 @@ const Card: React.FC<CardProps> = ({ member }) => {
               )}
             </div>
 
-            {/* Price */}
+            {/* Pricing */}
             <div className="flex gap-2 items-center">
               {member.discount && (
                 <span className="text-slate-500 dark:text-slate-400 line-through text-sm">

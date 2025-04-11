@@ -111,7 +111,7 @@ const Journey: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="relative overflow-hidden group bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-full font-medium shadow-lg transition-all duration-300 border border-cyan-400/30 hover:border-white/30"
+                className="shine shine-anim relative overflow-hidden group bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-full font-medium shadow-lg transition-all duration-300 border border-cyan-400/30 hover:border-white/30"
               >
                 <span className="relative z-10">Join Us</span>
                 <span className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -120,7 +120,7 @@ const Journey: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 rounded-full font-medium shadow-lg transition-all duration-300 border border-white/20 hover:border-cyan-400 bg-white/10 hover:bg-white/20 text-white hover:text-cyan-200 backdrop-blur-sm"
+                className="shine shine-anim px-8 py-3 rounded-full font-medium shadow-lg transition-all duration-300 border border-white/20 hover:border-cyan-400 bg-white/10 hover:bg-white/20 text-white hover:text-cyan-200 backdrop-blur-sm"
               >
                 Explore Courses
               </motion.button>

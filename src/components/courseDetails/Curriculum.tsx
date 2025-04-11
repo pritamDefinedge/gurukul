@@ -148,7 +148,7 @@ const Curriculum: React.FC<CurriculumProps> = ({
             ))}
           </div>
 
-          <div className="sticky top-10 self-start">
+          <div className="sticky top-20 self-start">
             <div className="rounded-3xl overflow-hidden shadow-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800">
               {/* Image Section */}
               <div className="relative">
