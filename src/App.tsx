@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import useSmoothScroll from "./hooks/useSmoothScroll";
 
 import Home from "./page/Home";
 import About from "./page/About";
@@ -10,6 +11,9 @@ import Login  from "./page/Login";
 import NotFound from "./page/NotFound"; // optional 404 page
 
 function App() {
+  // Apply smooth scrolling globally
+  useSmoothScroll();
+  
   return (
     <Router>
       <div className="min-h-screen">

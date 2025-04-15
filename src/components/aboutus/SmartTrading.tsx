@@ -2,7 +2,7 @@ import React from "react";
 import journeyImg from "../../assets/journey.png";
 import { motion } from "framer-motion";
 
-const Journey: React.FC = () => {
+const SmartTrading: React.FC = () => {
   return (
     <section className="relative w-full bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-24 sm:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Decorative background elements */}
@@ -235,4 +235,4 @@ const Journey: React.FC = () => {
   );
 };
 
-export default Journey;
+export default SmartTrading;

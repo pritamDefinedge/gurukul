@@ -1,10 +1,8 @@
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useAnimation } from "../context/AnimationContext";
 
 const useGsapAnimation = () => {
+  const { gsap } = useAnimation();
   const sectionRef = useRef<HTMLElement>(null);
   const listRef = useRef<HTMLUListElement>(null);
 
@@ -21,7 +19,7 @@ const useGsapAnimation = () => {
         toggleActions: "play none none reset",
       },
     });
-  }, []);
+  }, [gsap]);
 
   // List Animation (Triggers Every Time Section Comes Into View)
   useEffect(() => {
@@ -47,7 +45,7 @@ const useGsapAnimation = () => {
     }, sectionRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [gsap]);
 
   return { sectionRef, listRef };
 };

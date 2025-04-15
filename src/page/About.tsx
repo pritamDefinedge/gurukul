@@ -9,11 +9,22 @@ import Jumbotron from "../components/aboutus/Jumbotron";
 import GurukulWorks from "../components/aboutus/GurukulWorks";
 import GurukulHelp from "../components/aboutus/GurukulHelp";
 import SmartTrading from "../components/aboutus/SmartTrading";
-
+import { useAnimation } from "../context/AnimationContext";
 import { ArrowUpIcon } from "@heroicons/react/24/solid";
+import SectionWrapper from "../components/SectionWrapper";
 
-function Contact() {
+import {
+  HeroesSectionSkeleton,
+  StockSectionSkeleton,
+  JumbotronSectionSkeleton,
+  GurukulWorksSectionSkeleton,
+  GurukulHelpSectionSkeleton,
+  SmartTradingSectionSkeleton,
+} from "../components/skeletons/index";
+
+function About() {
   const [scrollTop, setScrollTop] = useState(false);
+  const { scrollTo } = useAnimation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,29 +35,44 @@ function Contact() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  const handleScrollToTop = () => {
+    scrollTo(0);
   };
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900">
       <Header />
 
-      {/* Hero Section */}
-      <HeroSection />
-      <Stock />
-      <Jumbotron />
-      <GurukulWorks />
-      <GurukulHelp/>
-      <SmartTrading/>
+      <SectionWrapper skeleton={<HeroesSectionSkeleton />}>
+        <HeroSection />
+      </SectionWrapper>
 
-   
+      <SectionWrapper skeleton={<StockSectionSkeleton />}>
+        <Stock />
+      </SectionWrapper>
+
+      <SectionWrapper skeleton={<JumbotronSectionSkeleton />}>
+        <Jumbotron />
+      </SectionWrapper>
+
+      <SectionWrapper skeleton={<GurukulWorksSectionSkeleton />}>
+        <GurukulWorks />
+      </SectionWrapper>
+
+      <SectionWrapper skeleton={<GurukulHelpSectionSkeleton />}>
+        <GurukulHelp />
+      </SectionWrapper>
+
+      <SectionWrapper skeleton={<SmartTradingSectionSkeleton />}>
+        <SmartTrading />
+      </SectionWrapper>
+
       <FooterBanner />
       <Footer />
 
       {/* Scroll To Top Button */}
       <motion.button
-        onClick={scrollToTop}
+        onClick={handleScrollToTop}
         initial={{ opacity: 0, y: 20 }}
         animate={{
           opacity: scrollTop ? 1 : 0,
@@ -62,4 +88,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default About;

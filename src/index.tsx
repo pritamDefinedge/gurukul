@@ -4,13 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { AnimationProvider } from './context/AnimationContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <AnimationProvider>
+      <App />
+    </AnimationProvider>
   </React.StrictMode>
 );
 

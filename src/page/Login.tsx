@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useAnimation } from '../context/AnimationContext';
 import {
   LockClosedIcon,
   EnvelopeIcon,
@@ -17,6 +18,7 @@ const LoginPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [scrollTop, setScrollTop] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+  const { scrollTo } = useAnimation();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,8 +29,8 @@ const LoginPage = () => {
     }, 1500);
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  const handleScrollToTop = () => {
+    scrollTo(0);
   };
 
   useEffect(() => {
@@ -232,7 +234,7 @@ const LoginPage = () => {
         {/* Scroll To Top Button */}
         <button
           className={`fixed ${scrollTop ? "visible opacity-100" : "invisible opacity-0"} right-4 bottom-4 z-50 bg-blue-600 dark:bg-blue-700 w-12 h-12 rounded-full transition-all duration-300 flex items-center justify-center hover:bg-blue-700 dark:hover:bg-blue-800 shadow-lg`}
-          onClick={scrollToTop}
+          onClick={handleScrollToTop}
           aria-label="Scroll to top"
         >
           <ArrowUpIcon className="w-6 h-6 text-white" />

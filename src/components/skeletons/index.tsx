@@ -1,0 +1,14 @@
+export { default as HeroSkeleton } from './HeroSkeleton';
+export { default as HeroesSectionSkeleton } from './HeroesSectionSkeleton';
+export { default as CoursesSectionSkeleton } from './CoursesSectionSkeleton';
+export { default as MissionSectionSkeleton } from './MissionSectionSkeleton';
+export { default as InstructorsSkeleton } from './InstructorsSkeleton';
+export { default as BenefitSkeleton } from './BenefitSkeleton';
+export { default as TestimonialsSectionSkeleton } from './TestimonialsSectionSkeleton';
+export { default as FAQSectionSkeleton } from './FAQSectionSkeleton';
+export { default as StockSectionSkeleton } from './StockSectionSkeleton';
+export { default as JumbotronSectionSkeleton } from './JumbotronSectionSkeleton';
+export { default as GurukulWorksSectionSkeleton } from './GurukulWorksSectionSkeleton';
+export { default as GurukulHelpSectionSkeleton } from './GurukulHelpSectionSkeleton';
+export { default as SmartTradingSectionSkeleton } from './SmartTradingSectionSkeleton'; 
+export { default as ContactSectionSkeleton } from './ContactSectionSkeleton'; 
