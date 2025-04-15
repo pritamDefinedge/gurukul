@@ -148,7 +148,7 @@ const LoginPage = () => {
                   </button>
                 </div>
                 <div className="flex justify-end text-sm mt-2">
-                  <a href="#" className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors">
+                  <a href="/login" className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors">
                     Forgot password?
                   </a>
                 </div>
@@ -186,7 +186,7 @@ const LoginPage = () => {
             >
               <p className="text-sm md:text-base text-gray-600 dark:text-gray-400">
                 Don't have an account?{' '}
-                <a href="#" className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium transition-colors">
+                <a href="/login" className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium transition-colors">
                   Sign up
                 </a>
               </p>

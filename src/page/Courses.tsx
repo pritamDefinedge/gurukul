@@ -7,9 +7,7 @@ import Courses from "../components/Courses";
 import { ArrowUpIcon } from "@heroicons/react/24/solid";
 import { useAnimation } from "../context/AnimationContext";
 import SectionWrapper from "../components/SectionWrapper";
-import {
-  CoursesSectionSkeleton,
-} from "../components/skeletons/index";
+import { CoursesSectionSkeleton } from "../components/skeletons/index";
 
 function CoursesPage() {
   const [scrollTop, setScrollTop] = useState(false);
@@ -37,7 +35,9 @@ function CoursesPage() {
         <FooterBanner />
       </main>
       <Footer />
+      
       {/* Scroll To Top Button */}
+
       <button
         className={`fixed ${
           scrollTop ? "visible opacity-100" : "invisible opacity-0"

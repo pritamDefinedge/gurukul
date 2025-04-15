@@ -19,6 +19,18 @@ import FeedBack from "../components/courseDetails/FeedBack";
 import PrasantSha from "../assets/prashant-shah-definedge-gurukul.webp";
 import Carriculum from "../assets/carriculum.png";
 
+import SectionWrapper from "../components/SectionWrapper";
+
+import {
+  CourseDetailsHeroSection,
+  WatchTrailerSkeleton,
+  CurriculumSkeleton,
+  WhatIsCourseSkeleton,
+  MakeTradingSkeleton,
+  ConfusionSkeleton,
+  InstructorSkeleton,
+} from "../components/skeletons/index";
+
 const courseContent = [
   {
     title: "Know Point & Figure",
@@ -235,17 +247,38 @@ function CourseDetails() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <HeroSection />
-      <WatchTrailer
-        videoSrc="/video.mp4"
-        thumbnailSrc={PrasantSha}
-        playButtonSize="md"
-      />
-      <Curriculum items={courseContent} />
-      <WhatIsCourse />
-      <MakeTrading />
-      <Confusion />
-      <Instructor />
+      <SectionWrapper skeleton={<CourseDetailsHeroSection />}>
+        <HeroSection />
+      </SectionWrapper>
+
+      <SectionWrapper skeleton={<WatchTrailerSkeleton />}>
+        <WatchTrailer
+          videoSrc="/video.mp4"
+          thumbnailSrc={PrasantSha}
+          playButtonSize="md"
+        />
+      </SectionWrapper>
+
+      <SectionWrapper skeleton={<CurriculumSkeleton />}>
+        <Curriculum items={courseContent} />
+      </SectionWrapper>
+
+      <SectionWrapper skeleton={<WhatIsCourseSkeleton />}>
+        <WhatIsCourse />
+      </SectionWrapper>
+
+      <SectionWrapper skeleton={<MakeTradingSkeleton />}>
+        <MakeTrading />
+      </SectionWrapper>
+
+      <SectionWrapper skeleton={<ConfusionSkeleton />}>
+        <Confusion />
+      </SectionWrapper>
+
+      <SectionWrapper skeleton={<InstructorSkeleton />}>
+        <Instructor />
+      </SectionWrapper>
+
       <Faq />
       <FeedBack />
       <FooterBanner />
