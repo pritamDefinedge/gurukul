@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const EventDetails = () => {
+const Faq = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const handleToggle = (index: number) => {
@@ -138,4 +138,4 @@ const faqData = [
   },
 ];
 
-export default EventDetails;
+export default Faq;

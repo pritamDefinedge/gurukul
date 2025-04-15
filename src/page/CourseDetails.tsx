@@ -29,6 +29,8 @@ import {
   MakeTradingSkeleton,
   ConfusionSkeleton,
   InstructorSkeleton,
+  FaqSkeleton,
+  FeedBackSkeleton,
 } from "../components/skeletons/index";
 
 const courseContent = [
@@ -279,8 +281,14 @@ function CourseDetails() {
         <Instructor />
       </SectionWrapper>
 
-      <Faq />
-      <FeedBack />
+      <SectionWrapper skeleton={<FaqSkeleton />}>
+        <Faq />
+      </SectionWrapper>
+
+      <SectionWrapper skeleton={<FeedBackSkeleton />}>
+        <FeedBack />
+      </SectionWrapper>
+
       <FooterBanner />
       <Footer />
       {/* Scroll To Top Button */}

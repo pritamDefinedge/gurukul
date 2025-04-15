@@ -20,3 +20,5 @@ export { default as WhatIsCourseSkeleton } from "./WhatIsCourseSkeleton";
 export { default as MakeTradingSkeleton } from "./MakeTradingSkeleton";
 export { default as ConfusionSkeleton } from "./ConfusionSkeleton";
 export { default as InstructorSkeleton } from "./InstructorSkeleton";
+export { default as FaqSkeleton } from "./FaqSkeleton";
+export { default as FeedBackSkeleton } from "./FeedBackSkeleton";
